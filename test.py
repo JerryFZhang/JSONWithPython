@@ -34,16 +34,21 @@ for item in keyboardArr:
     keyboardVarientsArr.append(item['variants'])
 
 for index, item in enumerate(computerVarientsArr):
-    print("-------")
-    print item
-    computerDetailsArr.append(item[index])
-    print computerDetailsArr[index]['grams']
-    print computerDetailsArr[index]['price']
+    for index, item in enumerate(item):
+        print("-------")
+        # print item
+        computerDetailsArr.append(item[index])
+        print item[index]
+        print computerDetailsArr[index]['grams']
+        print computerDetailsArr[index]['price']
 
 
 for index, item in enumerate(keyboardVarientsArr):
     print ("------")
-    print item
+    # print item
     keyboardDetailsArr.append(item[index])
     print keyboardDetailsArr[index]['grams']
     print keyboardDetailsArr[index]['price']
+
+# print computerVarientsArr
+# print computerDetailsArr
