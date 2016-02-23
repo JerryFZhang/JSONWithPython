@@ -8,7 +8,6 @@ productsArr = data['products']
 computerArr = []
 keyboardArr = []
 
-
 for item in productsArr:
     string = str(item)
     index = str(productsArr.index(item))
@@ -21,9 +20,14 @@ for item in productsArr:
     if "keyboard" in string:
         print ("Item "+ index + " is a keyboard.")
         keyboardArr.append(item)
-
     else:
          pass
 
-
 print ("There is(are) " + str(len(computerArr)) + " computer(s) " + str(len(keyboardArr)) + " keyboard(s)." )
+
+
+for item in computerArr:
+    print item
+
+for item in keyboardArr:
+    print item
