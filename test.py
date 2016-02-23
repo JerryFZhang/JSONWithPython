@@ -7,7 +7,9 @@ with open('products.json') as data_file:
 productsArr = data['products']
 computerArr = []
 keyboardArr = []
-
+computerVarientsArr = []
+keyboardVarientsArr = []
+computerDetailsArr = []
 for item in productsArr:
     string = str(item)
     index = str(productsArr.index(item))
@@ -25,9 +27,18 @@ for item in productsArr:
 
 print ("There is(are) " + str(len(computerArr)) + " computer(s) " + str(len(keyboardArr)) + " keyboard(s)." )
 
-
 for item in computerArr:
-    print item
-
+    computerVarientsArr.append(item['variants'])
 for item in keyboardArr:
+    keyboardVarientsArr.append(item['variants'])
+
+for index, item in enumerate(computerVarientsArr):
+    print("-------")
+    # print item
+    computerDetailsArr.append(item[index])
+    print computerDetailsArr[index]['grams']
+
+
+for item in keyboardVarientsArr:
+    print ("------")
     print item
