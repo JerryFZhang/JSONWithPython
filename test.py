@@ -10,6 +10,7 @@ keyboardArr = []
 computerVarientsArr = []
 keyboardVarientsArr = []
 computerDetailsArr = []
+keyboardDetailsArr = []
 for item in productsArr:
     string = str(item)
     index = str(productsArr.index(item))
@@ -34,11 +35,15 @@ for item in keyboardArr:
 
 for index, item in enumerate(computerVarientsArr):
     print("-------")
-    # print item
+    print item
     computerDetailsArr.append(item[index])
     print computerDetailsArr[index]['grams']
+    print computerDetailsArr[index]['price']
 
 
-for item in keyboardVarientsArr:
+for index, item in enumerate(keyboardVarientsArr):
     print ("------")
     print item
+    keyboardDetailsArr.append(item[index])
+    print keyboardDetailsArr[index]['grams']
+    print keyboardDetailsArr[index]['price']
