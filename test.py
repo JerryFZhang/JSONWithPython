@@ -7,48 +7,37 @@ with open('products.json') as data_file:
 productsArr = data['products']
 computerArr = []
 keyboardArr = []
-computerVarientsArr = []
-keyboardVarientsArr = []
-computerDetailsArr = []
-keyboardDetailsArr = []
-for item in productsArr:
+
+for index, item in enumerate(productsArr):
     string = str(item)
-    index = str(productsArr.index(item))
     if "computer" in string:
-        print ("Item "+ index + " is a computer.")
         computerArr.append(item)
     else:
          pass
-
     if "keyboard" in string:
-        print ("Item "+ index + " is a keyboard.")
         keyboardArr.append(item)
     else:
          pass
 
-print ("There is(are) " + str(len(computerArr)) + " computer(s) " + str(len(keyboardArr)) + " keyboard(s)." )
-
+computerVarientsArr = []
+keyboardVarientsArr = []
 for item in computerArr:
     computerVarientsArr.append(item['variants'])
 for item in keyboardArr:
     keyboardVarientsArr.append(item['variants'])
 
+computerDetailsArr = []
+keyboardDetailsArr = []
+
 for index, item in enumerate(computerVarientsArr):
     for index, item in enumerate(item):
-        print("-------")
-        # print item
-        computerDetailsArr.append(item[index])
-        print item[index]
-        print computerDetailsArr[index]['grams']
-        print computerDetailsArr[index]['price']
-
+        computerDetailsArr.append(item)
 
 for index, item in enumerate(keyboardVarientsArr):
-    print ("------")
-    # print item
-    keyboardDetailsArr.append(item[index])
-    print keyboardDetailsArr[index]['grams']
-    print keyboardDetailsArr[index]['price']
+    for index, item in enumerate(item):
+        keyboardDetailsArr.append(item)
 
-# print computerVarientsArr
-# print computerDetailsArr
+
+for item in computerDetailsArr:
+    print (item['grams'])
+    print (item['price'])
