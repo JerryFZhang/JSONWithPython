@@ -40,17 +40,19 @@ for item in computerDetails:
 for item in keyboardDetails:
     keyboardWeightAndPrice.append((float(item['grams']),float(item['price']),(item['id'])))
 
-print "ComputerWeightAndPrice Appended=============="
-print "keyboardWeightAndPrice Appended=============="
 import itertools
-
 
 permutation = []
 
 for r in itertools.product(computerWeightAndPrice, keyboardWeightAndPrice):
     permutation.append( ( int(r[0][0] + r[1][0]), round((r[0][1] + r[1][1]),4), str(r[0][2])+ " and " +str(r[1][2])))
 
-print permutation
+sumAllPriceAndWeight = [sum(x) for x in zip(*((item[0],item[1],)for item in permutation))]
+print sumAllPriceAndWeight
 
-# sumAllPrice = [sum(x) for x in zip(*permutation)]
-# print sumAllPrice
+final = []
+for r in itertools.product(computerWeightAndPrice,keyboardWeightAndPrice):
+    final.append((sumAllPriceAndWeight[0]- int(r[0][0]) - int(r[1][0]),round((sumAllPriceAndWeight[1]- int(r[0][1]) - int(r[1][1])),5)))
+
+
+print final
