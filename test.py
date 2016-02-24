@@ -45,14 +45,18 @@ computerWeightArr = []
 computerPriceArr = []
 
 for item in computerDetailsArr:
-    computerWeightArr.append(item['grams'])
-    computerPriceArr.append(item['price'])
+    computerWeightArr.append(float(item['grams']))
+    computerPriceArr.append(float(item['price']))
 
 keyboardWeightArr = []
 keyboardPriceArr = []
 
 for item in keyboardDetailsArr:
-    keyboardWeightArr.append(item['grams'])
-    keyboardPriceArr.append(item['price'])
+    keyboardWeightArr.append(float(item['grams']))
+    keyboardPriceArr.append(float(item['price']))
 
+# print all the arrays.
 print computerPriceArr
+print computerWeightArr
+print keyboardPriceArr
+print keyboardWeightArr
