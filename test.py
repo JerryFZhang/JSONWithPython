@@ -12,12 +12,10 @@ for index, item in enumerate(productsArr):
     string = str(item)
     if "computer" in string:
         computerArr.append(item)
-    else:
-         pass
+    else:pass
     if "keyboard" in string:
         keyboardArr.append(item)
-    else:
-         pass
+    else:pass
 
 computerVarientsArr = []
 
