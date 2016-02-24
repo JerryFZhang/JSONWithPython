@@ -12,16 +12,25 @@ for index, item in enumerate(products):
     products_temp.append(item)
 products = products_temp
 products_temp = [] # delete the variable
+
 for index, item in enumerate(products):
     products_temp.append(item)
+
 products = products_temp
+products_temp = None
 computers,keyboards = [],[]
 
 for index, item in enumerate(products):
     if item ['product_type'] == 'Computer':
-        computers.append(item)
+        computers.append((item['title'],item['options']))
+        print item
+        print "====="
+
     else: pass
     if item ['product_type'] == 'Keyboard':
         keyboards.append(item)
+        print item
+        print "==="
     else: pass
+
 print computers
