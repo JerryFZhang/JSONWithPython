@@ -37,26 +37,23 @@ for index, item in enumerate(keyboard_varients):
         keyboard_varient_details.append(item)
 
 
-computer_weight_price = []
-keyboard_weight_price = []
+computer_items = []
+keyboard_items = []
 
 tax_rate = 1.13 # For taxable items.
 
 # Find price, weight and unique item id. Parse them as a tuple list.
 for item in computer_varient_details:
-    computer_weight_price.append((float(item['grams']),float(item['price']),item['id'],item['taxable']))
+    computer_items.append((float(item['grams']),float(item['price']),item['id'],item['taxable']))
 
 for item in keyboard_varient_details:
-    keyboard_weight_price.append((float(item['grams']),float(item['price']),item['id'],item['taxable']))
+    keyboard_items.append((float(item['grams']),float(item['price']),item['id'],item['taxable']))
 
-print computer_weight_price
-print "========="
-print keyboard_weight_price
 # Find all the permutations between a keyboard and computer.
 
 permutation = []
 
-for r in itertools.product(computer_weight_price, keyboard_weight_price):
+for r in itertools.product(computer_items, keyboard_items):
     if (r[0][3] and r[1][3]) :
         # For taxable items.
         permutation.append( ( int(r[0][0] + r[1][0]), round((r[0][1]*tax_rate + r[1][1]*tax_rate),4), str(r[0][2])+ " and " +str(r[1][2])))
@@ -75,7 +72,7 @@ print '\n'+"The total weight of all combinations is " + str(sum_price_weight[0])
 
 sub_result = []
 
-for r in itertools.product(computer_weight_price,keyboard_weight_price):
+for r in itertools.product(computer_items,keyboard_items):
         sub_result.append((sum_price_weight[0]- int(r[0][0]) - int(r[1][0]),round((sum_price_weight[1]- int(r[0][1]) - int(r[1][1])),2)))
 
 # Print All the combination that is less than 100,000g, aka, 100kg.
