@@ -18,47 +18,39 @@ for index, item in enumerate(products):
     else:pass
 
 computerVarients = []
-
-for item in computer:
-    computerVarients.append(item['variants'])
-
-keyboardVarients = []
-
-for item in keyboard:
-    keyboardVarients.append(item['variants'])
-
 computerDetails = []
+keyboardVarients = []
+keyboardDetails = []
 
+for index, item in enumerate(computer):
+    computerVarients.append(item['variants'])
 for index, item in enumerate(computerVarients):
     for index, item in enumerate(item):
         computerDetails.append(item)
-
-keyboardDetails = []
-
+for index, item in enumerate(keyboard):
+    keyboardVarients.append(item['variants'])
 for index, item in enumerate(keyboardVarients):
     for index, item in enumerate(item):
         keyboardDetails.append(item)
 
-computerWeight = []
-computerPrice = []
-
+computerWeightAndPrice = []
+keyboardWeightAndPrice = []
 for item in computerDetails:
-    computerWeight.append(float(item['grams']))
-    computerPrice.append(float(item['price']))
-
-keyboardWeight = []
-keyboardPrice = []
-
+    computerWeightAndPrice.append((float(item['grams']),float(item['price']),(item['id'])))
 for item in keyboardDetails:
-    keyboardWeight.append(float(item['grams']))
-    keyboardPrice.append(float(item['price']))
+    keyboardWeightAndPrice.append((float(item['grams']),float(item['price']),(item['id'])))
 
-# print all the arrays.
-print computerPrice
-print computerWeight
-print keyboardPrice
-print keyboardWeight
-
-
+print "ComputerWeightAndPrice Appended=============="
+print "keyboardWeightAndPrice Appended=============="
 import itertools
-# for r in itertools.product(a, b): print r[0] + r[1]
+
+
+permutation = []
+
+for r in itertools.product(computerWeightAndPrice, keyboardWeightAndPrice):
+    permutation.append( ( int(r[0][0] + r[1][0]), round((r[0][1] + r[1][1]),4), str(r[0][2])+ " and " +str(r[1][2])))
+
+print permutation
+
+# sumAllPrice = [sum(x) for x in zip(*permutation)]
+# print sumAllPrice
