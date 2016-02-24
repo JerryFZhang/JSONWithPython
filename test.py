@@ -55,10 +55,16 @@ for r in itertools.product(computer_weight_price, keyboard_weight_price):
 
 # Add them up and see if the total price is over $100.
 sum_price_weight = [sum(x) for x in zip(*((item[0],item[1],)for item in permutation))]
-print sum_price_weight
+print ("The total weight of all combinations is " + str(sum_price_weight[0]) + " grams and the total price is "+ str(round(sum_price_weight[1],2)) +" dollars after tax.")
 
 # Subtrack one combination from the overweighted combinations and see which one is smaller than 100.
 sub_result = []
 for r in itertools.product(computer_weight_price,keyboard_weight_price):
-    sub_result.append((sum_price_weight[0]- int(r[0][0]) - int(r[1][0]),round((sum_price_weight[1]- int(r[0][1]) - int(r[1][1]))*tax_rate,5)))
-print sub_result
+    sub_result.append((sum_price_weight[0]- int(r[0][0]) - int(r[1][0]),round((sum_price_weight[1]- int(r[0][1]) - int(r[1][1]))*tax_rate,2)))
+
+# Print All the combination that is less than 100,000g, aka, 100kg.
+for item in sub_result:
+    if (item[0] <= 100000):
+        print item
+    else:
+        pass
