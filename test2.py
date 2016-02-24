@@ -8,9 +8,20 @@ with open('products.json') as data_file:
 
 products_temp = []
 
-for index, item in enumerate(products)
+for index, item in enumerate(products):
     products_temp.append(item)
 products = products_temp
-products_temp = None # delete the variable
-for index item in enumerate(products)
-    products_temp.append(item[varients])
+products_temp = [] # delete the variable
+for index, item in enumerate(products):
+    products_temp.append(item)
+products = products_temp
+computers,keyboards = [],[]
+
+for index, item in enumerate(products):
+    if item ['product_type'] == 'Computer':
+        computers.append(item)
+    else: pass
+    if item ['product_type'] == 'Keyboard':
+        keyboards.append(item)
+    else: pass
+print computers
