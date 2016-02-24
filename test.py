@@ -44,26 +44,44 @@ tax_rate = 1.13 # For taxable items.
 
 # Find price, weight and unique item id. Parse them as a tuple list.
 for item in computer_varient_details:
-    computer_weight_price.append((float(item['grams']),float(item['price']),(item['id'])))
-for item in keyboard_varient_details:
-    keyboard_weight_price.append((float(item['grams']),float(item['price']),(item['id'])))
+    computer_weight_price.append((float(item['grams']),float(item['price']),item['id'],item['taxable']))
 
-#Find all the permutations between a keyboard and computer.
+for item in keyboard_varient_details:
+    keyboard_weight_price.append((float(item['grams']),float(item['price']),item['id'],item['taxable']))
+
+print computer_weight_price
+print "========="
+print keyboard_weight_price
+# Find all the permutations between a keyboard and computer.
+
 permutation = []
+
 for r in itertools.product(computer_weight_price, keyboard_weight_price):
-    permutation.append( ( int(r[0][0] + r[1][0]), round((r[0][1] + r[1][1]),4), str(r[0][2])+ " and " +str(r[1][2])))
+    if (r[0][3] and r[1][3]) :
+        # For taxable items.
+        permutation.append( ( int(r[0][0] + r[1][0]), round((r[0][1]*tax_rate + r[1][1]*tax_rate),4), str(r[0][2])+ " and " +str(r[1][2])))
+    else:
+        # For non-taxable item.
+        permutation.append( ( int(r[0][0] + r[1][0]), round((r[0][1] + r[1][1]),4), str(r[0][2])+ " and " +str(r[1][2])))
+        pass
 
 # Add them up and see if the total price is over $100.
+
 sum_price_weight = [sum(x) for x in zip(*((item[0],item[1],)for item in permutation))]
-print "The total weight of all combinations is " + str(sum_price_weight[0]) + " grams and the total price is "+ str(round(sum_price_weight[1],2)) +" dollars after tax." +'\n'
+
+print '\n'+"The total weight of all combinations is " + str(sum_price_weight[0]) + " grams and the total price is "+ str(round(sum_price_weight[1],2)) +" dollars after taxed the taxable items." +'\n'
 
 # Subtrack one combination from the overweighted combinations and see which one is smaller than 100.
+
 sub_result = []
+
 for r in itertools.product(computer_weight_price,keyboard_weight_price):
-    sub_result.append((sum_price_weight[0]- int(r[0][0]) - int(r[1][0]),round((sum_price_weight[1]- int(r[0][1]) - int(r[1][1]))*tax_rate,2)))
+        sub_result.append((sum_price_weight[0]- int(r[0][0]) - int(r[1][0]),round((sum_price_weight[1]- int(r[0][1]) - int(r[1][1])),2)))
 
 # Print All the combination that is less than 100,000g, aka, 100kg.
+
 can_carry = []
+
 for item in sub_result:
     if (item[0] <= 100000):
         can_carry.append(item)
