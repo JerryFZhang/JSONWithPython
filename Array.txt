@@ -14,15 +14,15 @@ product_id: 2759178563
 position: 2
 option1: Mint green
 
-grams   : 6045
-title   : Yellow
-price   : 54.19
-id: 8041863491
-product_id: 2759178563
-position: 3
-option1: Yellow
+grams       : 6045
+title       : Yellow
+price       : 54.19
+id          : 8041863491
+product_id  : 2759178563
+position    : 3
+option1     : Yellow
 
-grams   : 9526
+grams      : 9526
 title   : Blue
 price   : 22.88
 id: 8041863555

@@ -3,58 +3,62 @@ import json
 
 with open('products.json') as data_file:
     data = json.load(data_file)
-    productsArr = data['products']
+    products = data['products']
 
-computerArr = []
-keyboardArr = []
+computer = []
+keyboard = []
 
-for index, item in enumerate(productsArr):
+for index, item in enumerate(products):
     string = str(item)
     if "computer" in string:
-        computerArr.append(item)
+        computer.append(item)
     else:pass
     if "keyboard" in string:
-        keyboardArr.append(item)
+        keyboard.append(item)
     else:pass
 
-computerVarientsArr = []
+computerVarients = []
 
-for item in computerArr:
-    computerVarientsArr.append(item['variants'])
+for item in computer:
+    computerVarients.append(item['variants'])
 
-keyboardVarientsArr = []
+keyboardVarients = []
 
-for item in keyboardArr:
-    keyboardVarientsArr.append(item['variants'])
+for item in keyboard:
+    keyboardVarients.append(item['variants'])
 
-computerDetailsArr = []
+computerDetails = []
 
-for index, item in enumerate(computerVarientsArr):
+for index, item in enumerate(computerVarients):
     for index, item in enumerate(item):
-        computerDetailsArr.append(item)
+        computerDetails.append(item)
 
-keyboardDetailsArr = []
+keyboardDetails = []
 
-for index, item in enumerate(keyboardVarientsArr):
+for index, item in enumerate(keyboardVarients):
     for index, item in enumerate(item):
-        keyboardDetailsArr.append(item)
+        keyboardDetails.append(item)
 
-computerWeightArr = []
-computerPriceArr = []
+computerWeight = []
+computerPrice = []
 
-for item in computerDetailsArr:
-    computerWeightArr.append(float(item['grams']))
-    computerPriceArr.append(float(item['price']))
+for item in computerDetails:
+    computerWeight.append(float(item['grams']))
+    computerPrice.append(float(item['price']))
 
-keyboardWeightArr = []
-keyboardPriceArr = []
+keyboardWeight = []
+keyboardPrice = []
 
-for item in keyboardDetailsArr:
-    keyboardWeightArr.append(float(item['grams']))
-    keyboardPriceArr.append(float(item['price']))
+for item in keyboardDetails:
+    keyboardWeight.append(float(item['grams']))
+    keyboardPrice.append(float(item['price']))
 
 # print all the arrays.
-print computerPriceArr
-print computerWeightArr
-print keyboardPriceArr
-print keyboardWeightArr
+print computerPrice
+print computerWeight
+print keyboardPrice
+print keyboardWeight
+
+
+import itertools
+# for r in itertools.product(a, b): print r[0] + r[1]
