@@ -63,8 +63,15 @@ for r in itertools.product(computer_weight_price,keyboard_weight_price):
     sub_result.append((sum_price_weight[0]- int(r[0][0]) - int(r[1][0]),round((sum_price_weight[1]- int(r[0][1]) - int(r[1][1]))*tax_rate,2)))
 
 # Print All the combination that is less than 100,000g, aka, 100kg.
+can_carry = []
 for item in sub_result:
     if (item[0] <= 100000):
-        print item
+        can_carry.append(item)
     else:
         pass
+
+print "There are " + str(len(can_carry)) +" different sets of "+str(len(permutation) - 1)+" combinations under 100kg."
+print "Lighest under 100kg:"
+print min(can_carry, key = lambda t: t[0])
+print "Cheapest under 100kg:"
+print min(can_carry, key = lambda t: t[1])
