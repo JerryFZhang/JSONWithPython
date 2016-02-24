@@ -35,6 +35,7 @@ for index, item in enumerate(keyboardVarients):
 
 computerWeightAndPrice = []
 keyboardWeightAndPrice = []
+tax_rate = 1.13
 for item in computerDetails:
     computerWeightAndPrice.append((float(item['grams']),float(item['price']),(item['id'])))
 for item in keyboardDetails:
@@ -52,7 +53,7 @@ print sumAllPriceAndWeight
 
 final = []
 for r in itertools.product(computerWeightAndPrice,keyboardWeightAndPrice):
-    final.append((sumAllPriceAndWeight[0]- int(r[0][0]) - int(r[1][0]),round((sumAllPriceAndWeight[1]- int(r[0][1]) - int(r[1][1])),5)))
+    final.append((sumAllPriceAndWeight[0]- int(r[0][0]) - int(r[1][0]),round((sumAllPriceAndWeight[1]- int(r[0][1]) - int(r[1][1]))*tax_rate,5)))
 
 
 print final
