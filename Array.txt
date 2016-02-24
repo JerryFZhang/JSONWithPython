@@ -1,0 +1,27 @@
+{ , u'created_at': u'2015-09-23T20:51:49-04:00', u'available': True, u'grams': 5145, u'title': u'White', u'price': u'67.25', u'requires_shipping': True, u'updated_at': u'2015-09-23T20:51:49-04:00', u'id': 8041863299, u'product_id': 2759178563, u'compare_at_price': None, u'featured_image': None, u'taxable': True, u'position': 1, u'option2': None, u'option3': None, u'option1': u'White'}
+
+{ , u'created_at': u'2015-09-23T20:51:49-04:00', u'available': True, u'grams': 6860, u'title': u'Mint green', u'price': u'29.58', u'requires_shipping': True, u'updated_at': u'2015-09-23T20:51:49-04:00', u'id': 8041863363, u'product_id': 2759178563, u'compare_at_price': None, u'featured_image': None, u'taxable': True, u'position': 2, u'option2': None, u'option3': None, u'option1': u'Mint green'}
+
+{ , u'created_at': u'2015-09-23T20:51:49-04:00', u'available': True, u'grams': 6045, u'title': u'Yellow', u'price': u'54.19', u'requires_shipping': True, u'updated_at': u'2015-09-23T20:51:49-04:00', u'id': 8041863491, u'product_id': 2759178563, u'compare_at_price': None, u'featured_image': None, u'taxable': True, u'position': 3, u'option2': None, u'option3': None, u'option1': u'Yellow'}
+
+{ , u'created_at': u'2015-09-23T20:51:49-04:00', u'available': True, u'grams': 9526, u'title': u'Blue', u'price': u'22.88', u'requires_shipping': True, u'updated_at': u'2015-09-23T20:51:49-04:00', u'id': 8041863555, u'product_id': 2759178563, u'compare_at_price': None, u'featured_image': None, u'taxable': True, u'position': 4, u'option2': None, u'option3': None, u'option1': u'Blue'}
+
+{ , u'created_at': u'2015-09-23T20:51:24-04:00', u'available': True, u'grams': 1906, u'title': u'Black', u'price': u'2.05', u'requires_shipping': True, u'updated_at': u'2015-09-23T20:51:24-04:00', u'id': 8041841795, u'product_id': 2759168323, u'compare_at_price': None, u'featured_image': None, u'taxable': True, u'position': 1, u'option2': None, u'option3': None, u'option1': u'Black'}
+
+{ , u'created_at': u'2015-09-23T20:51:24-04:00', u'available': True, u'grams': 4970, u'title': u'Orchid', u'price': u'10.78', u'requires_shipping': True, u'updated_at': u'2015-09-23T20:51:24-04:00', u'id': 8041841859, u'product_id': 2759168323, u'compare_at_price': None, u'featured_image': None, u'taxable': True, u'position': 2, u'option2': None, u'option3': None, u'option1': u'Orchid'}
+
+{ , u'created_at': u'2015-09-23T20:51:24-04:00', u'available': True, u'grams': 6738, u'title': u'Tan', u'price': u'50.54', u'requires_shipping': True, u'updated_at': u'2015-09-23T20:51:24-04:00', u'id': 8041841923, u'product_id': 2759168323, u'compare_at_price': None, u'featured_image': None, u'taxable': True, u'position': 3, u'option2': None, u'option3': None, u'option1': u'Tan'}
+
+{ , u'created_at': u'2015-09-23T20:51:24-04:00', u'available': True, u'grams': 8718, u'title': u'Teal', u'price': u'91.51', u'requires_shipping': True, u'updated_at': u'2015-09-23T20:51:24-04:00', u'id': 8041841987, u'product_id': 2759168323, u'compare_at_price': None, u'featured_image': None, u'taxable': True, u'position': 4, u'option2': None, u'option3': None, u'option1': u'Teal'}
+
+{ , u'created_at': u'2015-09-23T20:51:24-04:00', u'available': True, u'grams': 194, u'title': u'Gold', u'price': u'8.24', u'requires_shipping': True, u'updated_at': u'2015-09-23T20:51:24-04:00', u'id': 8041842051, u'product_id': 2759168323, u'compare_at_price': None, u'featured_image': None, u'taxable': True, u'position': 5, u'option2': None, u'option3': None, u'option1': u'Gold'}
+
+{ , u'created_at': u'2015-09-23T20:51:20-04:00', u'available': True, u'grams': 6035, u'title': u'Magenta', u'price': u'56.69', u'requires_shipping': True, u'updated_at': u'2015-09-23T20:51:20-04:00', u'id': 8041840195, u'product_id': 2759167747, u'compare_at_price': None, u'featured_image': None, u'taxable': True, u'position': 1, u'option2': None, u'option3': None, u'option1': u'Magenta'}
+
+{ , u'created_at': u'2015-09-23T20:51:20-04:00', u'available': True, u'grams': 9961, u'title': u'Mint green', u'price': u'63.89', u'requires_shipping': True, u'updated_at': u'2015-09-23T20:51:20-04:00', u'id': 8041840259, u'product_id': 2759167747, u'compare_at_price': None, u'featured_image': None, u'taxable': True, u'position': 2, u'option2': None, u'option3': None, u'option1': u'Mint green'}
+
+{ , u'created_at': u'2015-09-23T20:51:20-04:00', u'available': True, u'grams': 922, u'title': u'Maroon', u'price': u'18.76', u'requires_shipping': True, u'updated_at': u'2015-09-23T20:51:20-04:00', u'id': 8041840323, u'product_id': 2759167747, u'compare_at_price': None, u'featured_image': None, u'taxable': True, u'position': 3, u'option2': None, u'option3': None, u'option1': u'Maroon'}
+
+{ , u'created_at': u'2015-09-23T20:51:20-04:00', u'available': True, u'grams': 1355, u'title': u'Salmon', u'price': u'97.60', u'requires_shipping': True, u'updated_at': u'2015-09-23T20:51:20-04:00', u'id': 8041840387, u'product_id': 2759167747, u'compare_at_price': None, u'featured_image': None, u'taxable': True, u'position': 4, u'option2': None, u'option3': None, u'option1': u'Salmon'}
+
+{ , u'created_at': u'2015-09-23T20:52:07-04:00', u'available': True, u'grams': 3030, u'title': u'Magenta', u'price': u'14.20', u'requires_shipping': True, u'updated_at': u'2015-09-23T20:52:07-04:00', u'id': 8041883779, u'product_id': 2759192387, u'compare_at_price': None, u'featured_image': None, u'taxable': True, u'position': 1, u'option2': None, u'option3': None, u'option1': u'Magenta'}
