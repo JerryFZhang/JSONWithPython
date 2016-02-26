@@ -1,3 +1,4 @@
+#notes: will do it using oop.
 import json
 import itertools
 
@@ -23,14 +24,15 @@ computers,keyboards = [],[]
 for index, item in enumerate(products):
     if item ['product_type'] == 'Computer':
         computers.append((item['title'],item['options']))
-        print item
-        print "====="
+    else: pass
 
-    else: pass
     if item ['product_type'] == 'Keyboard':
-        keyboards.append(item)
+        keyboards.append((item['title'],item['options']))
         print item
-        print "==="
     else: pass
+    
+    for index, item in enumerate(item):
+        # Do the second step
+        pass
 
 print computers
